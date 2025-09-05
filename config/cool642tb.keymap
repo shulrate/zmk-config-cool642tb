@@ -24,6 +24,11 @@
             bindings = <&kp LS(SLASH)>;
             key-positions = <13 18>;
         };
+
+        bootloader {
+            bindings = <&bootloader>;
+            key-positions = <39 40>;
+        };
     };
 
     macros {
@@ -81,10 +86,10 @@
 
         NUM {
             bindings = <
-&kp F1       &kp F2   &kp F3             &kp F4         &kp F5                                                  &kp F6    &kp HOME        &kp UP_ARROW    &kp END          &bt BT_SEL 0
-&kp AT_SIGN  &kp SQT  &kp DOUBLE_QUOTES  &kp SEMICOLON  &kp COLON     &kp N1          &kp INT_KATAKANAHIRAGANA  &kp LEFT  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT        &bt BT_SEL 1
-&kp Z        &kp X    &kp C              &kp V          &kp B         &kp LEFT_BRACE  &kp RIGHT_BRACE           &none     &none           &kp LEFT_BRACE  &kp RIGHT_BRACE  &bt BT_CLR
-&kp RSHIFT   &kp TAB  &kp LCTRL          &kp RGUI       &kp LEFT_ALT  &kp UNDERSCORE  &none                     &none                                                      &bt BT_CLR_ALL
+&kp F1       &kp F2   &kp F3             &kp F4         &kp F5                                                  &none  &kp HOME        &kp UP_ARROW    &kp END          &bt BT_SEL 0
+&kp AT_SIGN  &kp SQT  &kp DOUBLE_QUOTES  &kp SEMICOLON  &kp COLON     &kp N1          &kp INT_KATAKANAHIRAGANA  &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT        &bt BT_SEL 1
+&kp Z        &kp X    &kp C              &kp V          &kp B         &kp LEFT_BRACE  &kp RIGHT_BRACE           &none  &none           &kp LEFT_BRACE  &kp RIGHT_BRACE  &bt BT_CLR
+&kp RSHIFT   &kp TAB  &kp LCTRL          &kp RGUI       &kp LEFT_ALT  &kp UNDERSCORE  &none                     &none                                                   &bt BT_CLR_ALL
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
