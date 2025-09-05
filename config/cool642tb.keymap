@@ -13,6 +13,12 @@
     quick-tap-ms = <0>;
 };
 
+#include <input/processors.dtsi>
+
+&mkp_input_listener {
+    input-processors = <&zip_temp_layer 4 700>;
+};
+
 / {
     combos {
         compatible = "zmk,combos";
