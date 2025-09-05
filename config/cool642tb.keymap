@@ -1,3 +1,9 @@
+#include <input/processors.dtsi>
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
+
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 100
 #define MOUSE 4
 #define SCROLL 5
@@ -8,11 +14,6 @@
     quick-tap-ms = <0>;
 };
 
-#include <input/processors.dtsi>
-#include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/pointing.h>
 
 &mkp_input_listener { input-processors = <&zip_temp_layer 4 700>; };
 
