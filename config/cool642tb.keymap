@@ -18,6 +18,9 @@
 &mkp_input_listener { input-processors = <&zip_temp_layer 4 1500>; };
 
 / {
+    chosen {
+        zmk,mouse-sensitivities = <100 150>; // X軸100%, Y軸150%
+    };
     combos {
         compatible = "zmk,combos";
 
