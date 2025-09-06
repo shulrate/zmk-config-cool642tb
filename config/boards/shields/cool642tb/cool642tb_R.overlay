@@ -27,8 +27,8 @@
 
 
 / {
-    trackball_listener: trackball_listener {
-        compatible = "zmk,input-listener";
+    trackball_listener_processors: trackball_listener_processors {
+        compatible = "zmk,input-listener-passthrough";
         device = <&trackball>;
 
         input-processors = <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT)>;
@@ -79,4 +79,3 @@
         scroll-layers = <1>;
     };
 };
-
