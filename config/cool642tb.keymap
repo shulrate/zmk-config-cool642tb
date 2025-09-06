@@ -52,9 +52,16 @@
             #binding-cells = <1>;
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
-            };
+        };
+
+        to_layer3_ctrl: to_layer3_ctrl {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mo 3 &kp LCTRL>;
+            label = "TO_LAYER3_CTRL";
+        };
     };
-    
+
     behaviors {
         lt_to_layer_0: lt_to_layer_0 {
             compatible = "zmk,behavior-hold-tap";
@@ -69,6 +76,7 @@
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+
             tap-ms = <20>;
         };
     };
@@ -79,13 +87,13 @@
 
         default_layer {
             bindings = <
-&kp ESC         &kp COMMA     &kp U    &kp E    &kp DOT                                       &kp X        &kp W  &kp R  &kp Y  &kp P
-&kp TAB         &kp I         &kp A    &kp O    &kp MINUS    &kp C_PLAY_PAUSE  &kp Q          &kp K        &kp T  &kp N  &kp S  &kp H
-&kp LEFT_SHIFT  &kp Z         &kp L    &kp C    &kp V        &kp SLASH         &kp F          &kp G        &kp D  &kp M  &kp B  &kp J
-&kp LCTRL       &kp LEFT_ALT  &kp F13  &kp F14  &lt 1 SPACE  &lt 1 DELETE      &kp BACKSPACE  &lt 2 ENTER                       &kp LEFT_WIN
+&kp ESC          &kp COMMA     &kp U    &kp E          &kp DOT                                           &kp X        &kp W  &kp R  &kp Y  &kp P
+&kp TAB          &kp I         &kp A    &kp O          &kp MINUS    &kp C_PLAY_PAUSE  &kp Q              &kp K        &kp T  &kp N  &kp S  &kp H
+&kp LEFT_SHIFT   &kp Z         &kp L    &kp C          &kp V        &kp SLASH         &kp F              &kp G        &kp D  &kp M  &kp B  &kp J
+&to_layer3_ctrl  &kp LEFT_ALT  &kp F13  &kp BACKSPACE  &lt 1 SPACE  &lt 1 DELETE      &kp LC(BACKSPACE)  &lt 2 ENTER                       &kp LEFT_WIN
             >;
 
-            sensor-bindings = <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
+            sensor-bindings = <&inc_dec_kp UP_ARROW DOWN_ARROW>;
         };
 
         FUNCTION {
@@ -93,10 +101,12 @@
 &none  &kp F7  &kp F8  &kp F9  &kp F12                &kp MINUS  &kp N7        &kp N8        &kp N9        &kp SLASH
 &none  &kp F4  &kp F5  &kp F6  &kp F11  &none  &none  &kp PLUS   &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp ASTERISK
 &none  &kp F1  &kp F2  &kp F3  &kp F10  &none  &none  &kp N0     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL
-&none  &none   &none   &none   &none    &none  &none &kp EQUAL                                            &kp LEFT_SHIFT
+&none  &none   &none   &none   &none    &none  &none  &kp EQUAL                                            &kp LEFT_SHIFT
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_DN C_VOL_UP>,
+                <&scroll_up_down>;
         };
 
         NUM {
@@ -110,11 +120,11 @@
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
         };
 
-        ARROW {
+        QWERTY {
             bindings = <
-&kp Q       &kp W      &kp E     &kp R     &kp T                        &kp Y        &kp U  &kp I      &kp O       &kp P
-&kp A       &kp S      &kp D     &kp F     &kp G        &kp N1  &kp N2  &kp H        &kp J  &kp K      &kp L       &kp ENTER
-&kp Z       &kp X      &kp C     &kp V     &kp B        &kp N3  &kp N4  &kp N        &kp M  &kp COMMA  &kp PERIOD  &kp SLASH
+&kp Q       &kp Q      &kp W     &kp E     &kp R                        &kp Y        &kp U  &kp I      &kp O       &kp P
+&kp A       &kp A      &kp S     &kp D     &kp F        &kp N1  &kp N2  &kp H        &kp J  &kp K      &kp L       &kp ENTER
+&kp Z       &kp Z      &kp X     &kp C     &kp V        &kp N3  &kp N4  &kp N        &kp M  &kp COMMA  &kp PERIOD  &kp SLASH
 &kp RSHIFT  &kp LCTRL  &kp LGUI  &kp LALT  &lt 1 SPACE  &kp N5  &kp N6  &lt 2 SPACE                                &kp BSPC
             >;
 
