@@ -3,6 +3,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing_scroll.h>
 #include <dt-bindings/zmk/pointing.h>
 
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 100
@@ -134,7 +135,7 @@
 &kp RSHIFT  &kp LCTRL  &kp LGUI  &kp LALT  &lt 1 SPACE  &kp N5  &kp N6  &lt 2 SPACE                                &kp BSPC
             >;
 
-            sensor-bindings = <&inc_dec_scroll_pk>;
+            sensor-bindings = <&pointing_scroll_vert>;
         };
 
         layer_6 {
