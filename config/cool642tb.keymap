@@ -15,10 +15,6 @@
 };
 
 &mkp_input_listener { input-processors = <&zip_temp_layer 4 700>; };
-&pmw3610 {
-    // デフォルトはマウスカーソル移動
-    bindings = <&mkp>;
-};
 
 / {
     combos {
@@ -77,22 +73,32 @@
             tap-ms = <20>;
         };
 
-        // 水平スクロール
-        scroll_left_right: behavior_sensor_rotate_mouse_wheel_left_right {
+        // 縦スクロール（上下）
+        scroll_up_down: behavior_sensor_rotate {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+            tap-ms = <20>;
+        };
+
+        // 横スクロール（左右）
+        scroll_left_right: behavior_sensor_rotate {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_LEFT>, <&msc SCRL_RIGHT>;
             tap-ms = <20>;
         };
-
-        trk_scroll: behavior_sensor_rotate {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "TRK_SCROLL";
-            bindings = <&mks>;   // ← mks = scroll
-        };
     };
-
-    keymap {
+}
+&pmw3610 {
+    // デフォルト動作はマウスカーソル移動
+    bindings = <&mkp>;
+};
+&encoder0 {
+    // 例: ロータリーエンコーダ用の挙動（必要に応じて変更してください）
+    bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+};
+   / {keymap {
         compatible = "zmk,keymap";
 
         default_layer {
@@ -114,7 +120,7 @@
 &none  &none   &none   &none   &none    &none  &none &kp EQUAL                                            &kp LEFT_SHIFT
             >;
 
-            sensor-bindings = <&mkp>;
+            sensor-bindings = <&scroll_up_down>;
         };
 
         NUM {
