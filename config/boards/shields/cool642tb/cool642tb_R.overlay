@@ -1,6 +1,9 @@
 #include "cool642tb.dtsi"
 #include <input/processors.dtsi>
 
+#define MOUSE_LAYER 4
+#define SCROLL_LAYER 5
+
 &default_transform {
     col-offset = <6>;
 };
@@ -31,7 +34,7 @@
         compatible = "zmk,input-listener";
         device = <&trackball>;
 
-        input-processors = <&zip_temp_layer 4 700>;
+        input-processors = <&zip_temp_layer MOUSE_LAYER 700>;
         
     };
 };
