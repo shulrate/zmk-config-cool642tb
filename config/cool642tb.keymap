@@ -65,32 +65,14 @@
             tapping-term-ms = <200>;
         };
 
-        // 縦スクロール（上下）
         scroll_up_down: behavior_sensor_rotate_up_down {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
             tap-ms = <20>;
         };
-
-        // 横スクロール（左右）
-        scroll_left_right: behavior_sensor_rotate_left_right {
-            compatible = "zmk,behavior-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_LEFT>, <&msc SCRL_RIGHT>;
-            tap-ms = <20>;
-        };
     };
-}
-&pmw3610 {
-    // デフォルト動作はマウスカーソル移動
-    bindings = <&mkp>;
-};
 
-&encoder0 {
-    bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
-};
- / {
     keymap {
         compatible = "zmk,keymap";
         compatible = "zmk,keymap";
@@ -103,7 +85,7 @@
 &kp LCTRL       &kp LEFT_ALT  &kp F13  &kp F14  &lt 1 SPACE  &lt 1 DELETE      &kp BACKSPACE  &lt 2 ENTER                       &kp LEFT_WIN
             >;
 
-            sensor-bindings = <&mkp>;
+            sensor-bindings = <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
         };
 
         FUNCTION {
@@ -114,7 +96,7 @@
 &none  &none   &none   &none   &none    &none  &none &kp EQUAL                                            &kp LEFT_SHIFT
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         NUM {
