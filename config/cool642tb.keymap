@@ -60,8 +60,8 @@
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
-
             tap-ms = <20>;
+            step-size = <2>;
         };
     };
 
