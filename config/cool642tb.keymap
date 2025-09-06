@@ -56,9 +56,16 @@
 
         to_layer3_ctrl: to_layer3_ctrl {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&mo 3 &kp LCTRL>;
+            #binding-cells = <1>;
+            bindings = <&macro_press>, <&macro_release>;
             label = "TO_LAYER3_CTRL";
+
+            macro_press: macro_press {
+                bindings = <&to 3>, <&kp &macro_param_1>;
+            };
+            macro_release: macro_release {
+                bindings = <&to 1>, <&kp &macro_param_1>;
+            };
         };
     };
 
