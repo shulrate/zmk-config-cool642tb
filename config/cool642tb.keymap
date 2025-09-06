@@ -65,14 +65,6 @@
             tapping-term-ms = <200>;
         };
 
-        scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
-            compatible = "zmk,behavior-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
-
-            tap-ms = <20>;
-        };
-
         // 縦スクロール（上下）
         scroll_up_down: behavior_sensor_rotate {
             compatible = "zmk,behavior-sensor-rotate";
@@ -94,11 +86,13 @@
     // デフォルト動作はマウスカーソル移動
     bindings = <&mkp>;
 };
+
 &encoder0 {
-    // 例: ロータリーエンコーダ用の挙動（必要に応じて変更してください）
     bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
 };
-   / {keymap {
+ / {
+    keymap {
+        compatible = "zmk,keymap";
         compatible = "zmk,keymap";
 
         default_layer {
