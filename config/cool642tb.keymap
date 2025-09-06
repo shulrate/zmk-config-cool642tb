@@ -56,12 +56,6 @@
     };
     
     behaviors {
-        scroller_binding: scroller {
-            compatible = "zmk,behavior-point-processor";
-            input-processors = <&zip_xy_to_scroll_mapper>, <&zip_scroll_scaler 1 128>;
-            process-next;
-        };
-
         lt_to_layer_0: lt_to_layer_0 {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_TO_0";
@@ -76,6 +70,14 @@
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
 
+            tap-ms = <20>;
+        };
+
+        // 水平スクロール
+        scroll_left_right: behavior_sensor_rotate_mouse_wheel_left_right {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_LEFT>, <&msc SCRL_RIGHT>;
             tap-ms = <20>;
         };
     };
@@ -102,7 +104,7 @@
 &none  &none   &none   &none   &none    &none  &none &kp EQUAL                                            &kp LEFT_SHIFT
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+             sensor-bindings = <&scroll_up_down &scroll_left_right>;
         };
 
         NUM {
