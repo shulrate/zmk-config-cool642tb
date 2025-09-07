@@ -19,7 +19,7 @@
 };
 
 &zip_temp_layer {
-    require-prior-idle-ms = <1000>;
+    require-prior-idle-ms = <500>;
     excluded-positions = <
         7
         8
@@ -30,6 +30,9 @@
         31
         32
         33
+        22
+        34
+        35
     >;
 };
 
