@@ -169,7 +169,7 @@
 &trans     &kp LG(Q)  &kp LG(W)  &kp LG(E)  &kp LG(R)                   &kp LG(T)  &kp LG(Y)  &kp LG(U)  &kp LG(I)      &kp LG(O)
 &trans     &kp LG(A)  &kp LG(S)  &kp LG(D)  &kp LG(F)  &none   &none   &kp LG(H)  &kp LG(J)  &kp LG(K)  &kp LG(L)      &kp LG(P)
 &kp LSHFT  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &none   &none   &kp LG(B)  &kp LG(N)  &kp LG(M)  &kp LG(COMMA)  &kp LG(DOT)
-&kp LCTRL  &LALT     &trans  &trans  &trans  &trans  &trans  &trans                          &trans
+&kp LCTRL  &kp LALT     &trans  &trans  &trans  &trans  &trans  &trans                          &trans
             >;
         };
     };
