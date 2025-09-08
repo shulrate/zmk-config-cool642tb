@@ -80,6 +80,16 @@
             #binding-cells = <0>;
             bindings = <&kp LWIN>, <&tog 3>;
         };
+
+        mt_nr: mt_nr {
+            compatible = "zmk,behavior-mod-tap";
+            label = "MT_NR";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "hold-preferred";
+            bindings = <&none>, <&none>;
+            no-repeat;
+        };
     };
 
     keymap {
@@ -88,9 +98,9 @@
 
         default_layer {
             bindings = <
-&kp ESC         &mt LC(Q) COMMA  { no-repeat; }  &mt LC(W) U    { no-repeat; }  &mt LC(E) E    { no-repeat; }  &mt LC(R) DOT   { no-repeat; }                                &mt LC(T) X    { no-repeat; }  &mt LC(Y) W   { no-repeat; }  &mt LC(U) R   { no-repeat; }  &mt LC(I) Y   { no-repeat; }  &mt LC(O) P   { no-repeat; }
-&kp TAB         &mt LC(A) I      { no-repeat; }  &mt LC(S) A    { no-repeat; }  &mt LC(D) O    { no-repeat; }  &mt LC(F) MINUS { no-repeat; }   &kp C_PLAY_PAUSE  &mt LC(LEFT_BRACKET) Q  { no-repeat; }  &mt LC(H) K   { no-repeat; }  &mt LC(J) T   { no-repeat; }  &mt LC(K) N   { no-repeat; }  &lt 5 S  &mt LC(P) H { no-repeat; }
-&kp LEFT_SHIFT  &mt LC(Z) Z      { no-repeat; }  &mt LC(X) L    { no-repeat; }  &mt LC(C) C    { no-repeat; }  &mt LC(V) V     { no-repeat; }  &mt LC(L) SLASH    { no-repeat; }  &mt LC(RIGHT_BRACKET) F  { no-repeat; }  &mt LC(B) G   { no-repeat; }  &mt LC(N) D   { no-repeat; }  &mt LC(M) M   { no-repeat; }  &mt LC(COMMA) B  { no-repeat; }  &mt LC(DOT) J { no-repeat; }
+&kp ESC         &mt_nr LC(Q) COMMA  &mt_nr LC(W) U    &mt_nr LC(E) E         &mt_nr LC(R) DOT                                   &mt_nr LC(T) X        &mt_nr LC(Y) W  &mt_nr LC(U) R &mt_nr LC(I) Y    &mt_nr LC(O) P
+&kp TAB         &mt_nr LC(A) I      &mt_nr LC(S) A    &mt_nr LC(D) O         &mt_nr LC(F) MINUS    &kp C_PLAY_PAUSE  &mt_nr LC(LEFT_BRACKET) Q      &mt_nr LC(H) K        &mt_nr LC(J) T  &mt_nr LC(K) N  &lt 5 S  &mt_nr LC(P) H
+&kp LEFT_SHIFT  &mt_nr LC(Z) Z     &mt_nr LC(X) L   &mt_nr LC(C) C         &mt_nr LC(V) V       &mt_nr LC(L) SLASH         &mt_nr LC(RIGHT_BRACKET) F      &mt_nr LC(B) G       &mt_nr LC(N) D  &mt_nr LC(M) M  &mt_nr LC(COMMA) B    &mt_nr LC(DOT) J
 &kp LCTRL       &kp LALT   &kp SQT  &kp BACKSPACE  &lt 1 SPACE  &kp F14           &lt 3 F13  &lt 2 ENTER                         &win_and_qwerty
             >;
 
