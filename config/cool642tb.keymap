@@ -88,9 +88,9 @@
 
         default_layer {
             bindings = <
-&kp ESC         &mt COMMA LC(Q)  &mt U LC(W)    &mt E LC(E)         &mt DOT LC(R)                                   &mt X LC(T)        &mt W LC(Y)  &mt R LC(U) &mt Y LC(I)    &mt P LC(O)
-&kp TAB         &mt I LC(A)      &mt A LC(S)    &mt O LC(D)          &mt MINUS LC(F)    &kp C_PLAY_PAUSE  &mt Q LC(LEFT_BRACKET)      &mt K LC(H)        &mt T LC(J)  &mt N LC(K)  &lt 5 S  &mt H LC(P)
-&kp LEFT_SHIFT  &mt Z LC(Z)     &mt L LC(X)   &mt C LC(C)         &mt V LC(V)       &mt SLASH LC(S)         &mt F LC(RIGHT_BRACKET)      &mt G LC(B)       &mt D LC(N)  &mt M LC(M)  &mt B LC(COMMA)    &mt J LC(DOT)
+&kp ESC         &mt LC(Q) COMMA  &mt LC(W) U    &mt LC(E) E         &mt LC(R) DOT                                   &mt LC(T) X        &mt LC(Y) W  &mt LC(U) R &mt LC(I) Y    &mt LC(O) P
+&kp TAB         &mt LC(A) I      &mt LC(S) A    &mt LC(D) O         &mt LC(F) MINUS    &kp C_PLAY_PAUSE  &mt LC(LEFT_BRACKET) Q      &mt LC(H) K        &mt LC(J) T  &mt LC(K) N  &lt 5 S  &mt LC(P) H
+&kp LEFT_SHIFT  &mt LC(Z) Z     &mt LC(X) L   &mt LC(C) C         &mt LC(V) V       &mt LC(L) SLASH         &mt LC(RIGHT_BRACKET) F      &mt LC(B) G       &mt LC(N) D  &mt LC(M) M  &mt LC(COMMA) B    &mt LC(DOT) J
 &kp LCTRL       &kp LALT   &kp SQT  &kp BACKSPACE  &lt 1 SPACE  &kp F14           &lt 3 F13  &lt 2 ENTER                         &win_and_qwerty
             >;
 
