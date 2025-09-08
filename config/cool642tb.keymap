@@ -88,9 +88,9 @@
 
         default_layer {
             bindings = <
-&kp ESC         &kp COMMA  &kp U    &kp E          &kp DOT                                   &kp X        &kp W  &kp R  &kp Y    &kp P
-&kp TAB         &kp I      &kp A    &kp O          &kp MINUS    &kp C_PLAY_PAUSE  &kp Q      &kp K        &kp T  &kp N  &lt 5 S  &kp H
-&kp LEFT_SHIFT  &kp Z      &kp L    &kp C          &kp V        &kp SLASH         &kp F      &kp G        &kp D  &kp M  &kp B    &kp J
+&kp ESC         &mt COMMA LC(Q)  &mt U LC(W)    &mt E LC(E)         &mt DOT LC(R)                                   &mt X LC(T)        &mt W LC(Y)  &mt R LC(U) &mt Y LC(I)    &mt P LC(O)
+&kp TAB         &mt I LC(A)      &mt A LC(S)    &mt O LC(D)          &mt MINUS LC(F)    &kp C_PLAY_PAUSE  &mt Q LC(LEFT_BRACKET)      &mt K LC(H)        &mt T LC(J)  &mt N LC(K)  &lt 5 S  &mt H LC(P)
+&kp LEFT_SHIFT  &mt Z LC(Z)     &mt L LC(X)   &mt C LC(C)         &mt V LC(V)       &mt SLASH LC(S)         &mt F LC(RIGHTn_BRACKET)      &mt G LC(B)       &mt D LC(N)  &mt M LC(M)  &mt B LC(COMMA)    &mt J LC(DOT)
 &kp LCTRL       &kp LALT   &kp SQT  &kp BACKSPACE  &lt 1 SPACE  &kp F14           &lt 3 F13  &lt 2 ENTER                         &win_and_qwerty
             >;
 
@@ -132,7 +132,7 @@
 
         MOUSE {
             bindings = <
-&kp ESC         &kp COMMA     &kp U    &kp E          &kp DOT                                 &kp X        &kp W  &mkp MB4   &mkp MCLK  &mkp MB5
+&kp ESC         &kp COMMA     &kp U    &kp E          &kp DOT                                 &kp X        &kp W  &mkp MB4   &mkp MCLK  &kp DEL
 &kp TAB         &kp I         &kp A    &kp O          &kp MINUS    &kp C_PLAY_PAUSE  &kp Q    &kp K        &kp T  &mkp LCLK  &mo 5      &mkp RCLK
 &kp LEFT_SHIFT  &kp Z         &kp L    &kp C          &kp V        &kp SLASH         &kp F    &kp G        &kp D  &mkp MB4   &tog 5     &mkp MB5
 &kp LCTRL       &kp LEFT_ALT  &kp SQT  &kp BACKSPACE  &lt 1 SPACE  &kp F14           &kp F13  &lt 2 ENTER                               &kp LEFT_WIN
@@ -143,7 +143,7 @@
 
         SCROLL {
             bindings = <
-&kp ESC         &kp COMMA     &kp U    &kp E          &kp DOT                                 &kp X        &kp W  &mkp MB4   &mkp MCLK  &mkp MB5
+&kp ESC         &kp COMMA     &kp U    &kp E          &kp DOT                                 &kp X        &kp W  &mkp MB4   &mkp MCLK  &kp DEL
 &kp TAB         &kp I         &kp A    &kp O          &kp MINUS    &kp C_PLAY_PAUSE  &kp Q    &kp K        &kp T  &mkp LCLK  &tog 5     &mkp RCLK
 &kp LEFT_SHIFT  &kp Z         &kp L    &kp C          &kp V        &kp SLASH         &kp F    &kp G        &kp D  &mkp MB4   &tog 5     &mkp MB5
 &kp LCTRL       &kp LEFT_ALT  &kp SQT  &kp BACKSPACE  &lt 1 SPACE  &kp F14           &kp F13  &lt 2 ENTER                               &kp LEFT_WIN
