@@ -88,9 +88,9 @@
 
         default_layer {
             bindings = <
-&kp ESC         &mt LC(Q) COMMA  &mt LC(W) U    &mt LC(E) E         &mt LC(R) DOT                                   &mt LC(T) X        &mt LC(Y) W  &mt LC(U) R &mt LC(I) Y    &mt LC(O) P
-&kp TAB         &mt LC(A) I      &mt LC(S) A    &mt LC(D) O         &mt LC(F) MINUS    &kp C_PLAY_PAUSE  &mt LC(LEFT_BRACKET) Q      &mt LC(H) K        &mt LC(J) T  &mt LC(K) N  &lt 5 S  &mt LC(P) H
-&kp LEFT_SHIFT  &mt LC(Z) Z     &mt LC(X) L   &mt LC(C) C         &mt LC(V) V       &mt LC(L) SLASH         &mt LC(RIGHT_BRACKET) F      &mt LC(B) G       &mt LC(N) D  &mt LC(M) M  &mt LC(COMMA) B    &mt LC(DOT) J
+&kp ESC         &mt LC(Q) COMMA  { no-repeat; }  &mt LC(W) U    { no-repeat; }  &mt LC(E) E    { no-repeat; }  &mt LC(R) DOT   { no-repeat; }                                &mt LC(T) X    { no-repeat; }  &mt LC(Y) W   { no-repeat; }  &mt LC(U) R   { no-repeat; }  &mt LC(I) Y   { no-repeat; }  &mt LC(O) P   { no-repeat; }
+&kp TAB         &mt LC(A) I      { no-repeat; }  &mt LC(S) A    { no-repeat; }  &mt LC(D) O    { no-repeat; }  &mt LC(F) MINUS { no-repeat; }   &kp C_PLAY_PAUSE  &mt LC(LEFT_BRACKET) Q  { no-repeat; }  &mt LC(H) K   { no-repeat; }  &mt LC(J) T   { no-repeat; }  &mt LC(K) N   { no-repeat; }  &lt 5 S  &mt LC(P) H { no-repeat; }
+&kp LEFT_SHIFT  &mt LC(Z) Z      { no-repeat; }  &mt LC(X) L    { no-repeat; }  &mt LC(C) C    { no-repeat; }  &mt LC(V) V     { no-repeat; }  &mt LC(L) SLASH    { no-repeat; }  &mt LC(RIGHT_BRACKET) F  { no-repeat; }  &mt LC(B) G   { no-repeat; }  &mt LC(N) D   { no-repeat; }  &mt LC(M) M   { no-repeat; }  &mt LC(COMMA) B  { no-repeat; }  &mt LC(DOT) J { no-repeat; }
 &kp LCTRL       &kp LALT   &kp SQT  &kp BACKSPACE  &lt 1 SPACE  &kp F14           &lt 3 F13  &lt 2 ENTER                         &win_and_qwerty
             >;
 
