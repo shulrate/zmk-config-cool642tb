@@ -39,16 +39,6 @@
             key-positions = <25 24>;
         };
 
-        hiragana {
-            bindings = <&kp F14>;
-            key-positions = <13 12>;
-        };
-
-        eizi {
-            bindings = <&kp F13>;
-            key-positions = <19 18>;
-        };
-
         Setting_layer {
             bindings = <&mo 7>;
             key-positions = <11 12 10>;
