@@ -9,6 +9,7 @@
             , <&gpio0 10 GPIO_ACTIVE_HIGH>
             , <&gpio0 9 GPIO_ACTIVE_HIGH>
             ;
+        debounce-period = <5>;
 };
 
 &left_encoder {
