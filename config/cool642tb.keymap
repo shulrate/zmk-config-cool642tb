@@ -45,6 +45,16 @@
             bindings = <&mo 7>;
             key-positions = <11 12 10>;
         };
+
+        santen_ri-da {
+            bindings = <&santen_ridan>;
+            key-positions = <14 13>;
+        };
+
+        codeblock {
+            bindings = <&codeblock>;
+            key-positions = <1 2>;
+        };
     };
 
     macros {
@@ -60,6 +70,20 @@
             #binding-cells = <1>;
             bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TAP_ONLY";
+        };
+
+        santen_ridan: santen_ridan {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp FSLH &kp FSLH &kp FSLH>;
+            label = "SANTEN_RIDAN";
+        };
+
+        codeblock: codeblock {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE &kp GRAVE &kp GRAVE>;
+            label = "CODEBLOCK";
         };
     };
 
@@ -162,10 +186,10 @@
 
         other {
             bindings = <
-&trans  &kp LA(Q)        &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans                  &trans  &trans  &trans  &trans  &trans
-&trans  &kp PRINTSCREEN  &kp C_PLAY_PAUSE   &trans           &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp C_PREVIOUS   &kp C_NEXT         &trans           &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans           &trans             &trans           &trans  &trans  &trans  &trans                          &trans
+&trans  &kp LA(Q)        &kp C_VOLUME_DOWN       &kp C_VOLUME_UP  &trans                  &trans  &kp F16  &kp F17  &kp F18  &trans
+&trans  &kp PRINTSCREEN  &mt_hs LG(N) LG(LA(N))  &kp C_PP         &trans  &trans  &trans  &trans  &kp F19  &kp F20  &kp F21  &trans
+&trans  &kp C_PREVIOUS   &kp C_NEXT              &kp F15          &trans  &trans  &trans  &trans  &kp F22  &kp F23  &kp F24  &trans
+&trans  &trans           &trans                  &trans           &trans  &trans  &trans  &trans                             &trans
             >;
         };
 
