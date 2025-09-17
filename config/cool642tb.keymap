@@ -164,10 +164,11 @@
 
         MOUSE {
             bindings = <
-&trans          &kp COMMA     &kp U    &kp E          &kp DOT                                 &kp X        &kp W  &mkp MB4   &mkp MCLK  &kp DEL
-&kp TAB         &kp I         &kp A    &kp O          &kp MINUS    &kp C_PLAY_PAUSE  &kp Q    &kp K        &kp T  &mkp LCLK  &mo 5      &mkp RCLK
-&kp LEFT_SHIFT  &kp Z         &kp L    &kp C          &kp V        &kp SLASH         &kp F    &kp G        &kp D  &mkp MB4   &tog 5     &mkp MB5
-&kp LCTRL       &kp LEFT_ALT  &kp SQT  &kp BACKSPACE  &lt 2 SPACE  &kp F14           &kp F13  &lt 3 ENTER                               &kp LEFT_WIN
+&trans  &trans  &trans  &trans  &trans                     &trans  &trans  &mkp MB4   &mkp MCLK  &kp DEL
+&trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &mkp LCLK  &mo 5      &mkp RCLK
+&trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &mkp MB4   &tog 5     &mkp MB5
+&trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans                                &trans
+
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -175,10 +176,10 @@
 
         SCROLL {
             bindings = <
-&kp ESC         &kp COMMA     &kp U    &kp E          &kp DOT                                 &kp X        &kp W  &mkp MB4   &mkp MCLK  &kp DEL
-&kp TAB         &kp I         &kp A    &kp O          &kp MINUS    &kp C_PLAY_PAUSE  &kp Q    &kp K        &kp T  &mkp LCLK  &tog 5     &mkp RCLK
-&kp LEFT_SHIFT  &kp Z         &kp L    &kp C          &kp V        &kp SLASH         &kp F    &kp G        &kp D  &mkp MB4   &tog 5     &mkp MB5
-&kp LCTRL       &kp LEFT_ALT  &kp SQT  &kp BACKSPACE  &lt 2 SPACE  &kp F14           &kp F13  &lt 3 ENTER                               &kp LEFT_WIN
+&trans  &trans  &trans  &trans  &trans                     &trans  &trans  &&mkp MB4   &mkp MCLK  &kp DEL
+&trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &&mkp LCLK  &tog 5     &mkp RCLK
+&trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &&mkp MB4   &tog 5     &mkp MB5
+&trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans                                 &kp trans
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
