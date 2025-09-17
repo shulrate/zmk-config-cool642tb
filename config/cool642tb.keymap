@@ -179,7 +179,7 @@
 &trans  &trans  &trans  &trans  &trans                     &trans  &trans  &mkp MB4   &mkp MCLK  &kp DEL
 &trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &mkp LCLK  &tog 5     &mkp RCLK
 &trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &mkp MB4   &tog 5     &mkp MB5
-&trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans                                &kp trans
+&trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans                                &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
