@@ -120,13 +120,13 @@
 
         default_layer {
             bindings = <
-&kp ESC         &mt_hs LC(Q) COMMA  &mt_hs LC(W) U  &mt_hs LC(E) E  &mt_hs LC(R) DOT                                                     &mt_hs LC(T) X  &mt_hs LC(Y) W  &mt_hs LC(U) R  &mt_hs LC(I) Y      &mt_hs LC(O) P
-&lt 6 TAB       &mt_hs LC(A) I      &mt_hs LC(S) A  &mt_hs LC(D) O  &mt_hs LC(F) MINUS  &mt_hs LC(SEMI) SEMI  &mt_hs LC(G) Q             &mt_hs LC(H) K  &mt_hs LC(J) T  &mt_hs LC(K) N  &lt 5 S             &mt_hs LC(P) H
-&kp LEFT_SHIFT  &mt_hs LC(Z) Z      &mt_hs LC(X) L  &mt_hs LC(C) C  &mt_hs LC(V) V      &mt_hs LC(L) SLASH    &mt_hs LC(LEFT_BRACKET) F  &mt_hs LC(B) G  &mt_hs LC(N) D  &mt_hs LC(M) M  &mt_hs LC(COMMA) B  &mt_hs LC(DOT) J
-&kp LCTRL       &kp LALT            &kp DELETE      &kp BACKSPACE   &lt 2 SPACE         &kp F14               &lt 1 F13                  &lt 3 ENTER                                                         &win_and_qwerty
+&kp ESC         &mt_hs LC(Q) COMMA  &mt_hs LC(W) U  &mt_hs LC(E) E  &mt_hs LC(R) DOT                                                   &mt_hs LC(T) X  &mt_hs LC(Y) W  &mt_hs LC(U) R  &mt_hs LC(I) Y      &mt_hs LC(O) P
+&lt 6 TAB       &mt_hs LC(A) I      &mt_hs LC(S) A  &mt_hs LC(D) O  &mt_hs LC(F) MINUS  &kp C_PLAY_PAUSE    &mt_hs LC(G) Q             &mt_hs LC(H) K  &mt_hs LC(J) T  &mt_hs LC(K) N  &lt 5 S             &mt_hs LC(P) H
+&kp LEFT_SHIFT  &mt_hs LC(Z) Z      &mt_hs LC(X) L  &mt_hs LC(C) C  &mt_hs LC(V) V      &mt_hs LC(L) SLASH  &mt_hs LC(LEFT_BRACKET) F  &mt_hs LC(B) G  &mt_hs LC(N) D  &mt_hs LC(M) M  &mt_hs LC(COMMA) B  &mt_hs LC(DOT) J
+&kp LCTRL       &kp LALT            &kp DELETE      &kp BACKSPACE   &lt 2 SPACE         &kp F14             &lt 1 F13                  &lt 3 ENTER                                                         &win_and_qwerty
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOL_UP>;
         };
 
         QWERTY {
@@ -153,10 +153,10 @@
 
         Symbol {
             bindings = <
-&kp GRAVE       &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp AT_SIGN    &kp DOLLAR                                &kp DOUBLE_QUOTES  &kp HOME        &kp UP_ARROW    &kp END        &none
-&kp TILDE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp HASH       &kp PERCENT  &kp SINGLE_QUOTE      &none  &kp COLON          &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT      &none
-&kp LEFT_SHIFT  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AMPERSAND  &kp CARET    &kp PIPE              &none  &kp SEMI           &kp PAGE_UP     &none           &kp PAGE_DOWN  &none
-&kp LCTRL       &kp LEFT_ALT          &kp DELETE             &kp BACKSPACE  &kp SPACE    &kp NON_US_BACKSLASH  &none  &none                                                             &none
+&kp GRAVE       &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp AT_SIGN    &kp DOLLAR                                           &kp DOUBLE_QUOTES  &kp HOME        &kp UP_ARROW    &kp END        &none
+&kp TILDE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp HASH       &kp PERCENT  &trans                &kp SINGLE_QUOTE  &kp COLON          &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT      &none
+&kp LEFT_SHIFT  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AMPERSAND  &kp CARET    &kp PIPE              &none             &kp SEMI           &kp PAGE_UP     &none           &kp PAGE_DOWN  &none
+&kp LCTRL       &kp LEFT_ALT          &kp DELETE             &kp BACKSPACE  &kp SPACE    &kp NON_US_BACKSLASH  &none             &none                                                             &none
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -164,7 +164,7 @@
 
         MOUSE {
             bindings = <
-&kp ESC         &kp COMMA     &kp U    &kp E          &kp DOT                                 &kp X        &kp W  &mkp MB4   &mkp MCLK  &kp DEL
+&trans          &kp COMMA     &kp U    &kp E          &kp DOT                                 &kp X        &kp W  &mkp MB4   &mkp MCLK  &kp DEL
 &kp TAB         &kp I         &kp A    &kp O          &kp MINUS    &kp C_PLAY_PAUSE  &kp Q    &kp K        &kp T  &mkp LCLK  &mo 5      &mkp RCLK
 &kp LEFT_SHIFT  &kp Z         &kp L    &kp C          &kp V        &kp SLASH         &kp F    &kp G        &kp D  &mkp MB4   &tog 5     &mkp MB5
 &kp LCTRL       &kp LEFT_ALT  &kp SQT  &kp BACKSPACE  &lt 2 SPACE  &kp F14           &kp F13  &lt 3 ENTER                               &kp LEFT_WIN
