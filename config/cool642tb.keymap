@@ -99,7 +99,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "WIN_AND_QWERTY";
             #binding-cells = <0>;
-            bindings = <&kp LWIN>, <&tog 1>;
+            bindings = <&kp LWIN>, <&tog 1>, <&tog 9>;
         };
 
         mt_hs: mt_hs {
@@ -206,6 +206,15 @@
 &trans  &kp N4  &kp N5  &kp N6  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp N1  &kp N2  &kp N3  &kp N0  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans
+            >;
+        };
+
+        arrow_mode {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                  &trans  &trans          &kp UP_ARROW    &trans           &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans          &trans           &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                                                   &trans
             >;
         };
     };
