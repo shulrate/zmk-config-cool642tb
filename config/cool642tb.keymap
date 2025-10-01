@@ -140,10 +140,10 @@
 
         NUM {
             bindings = <
-&none      &kp F7    &kp F8  &kp F9  &kp F12                &kp MINUS         &mt_hs LC(N7) N7              &mt_hs LC(N8) N8              &mt_hs LC(N9) N9              &kp SLASH
-&none      &kp F4    &kp F5  &kp F6  &kp F11  &none  &none  &kp PLUS          &mt_hs LC(NUMBER_4) NUMBER_4  &mt_hs LC(N5) N5              &mt_hs LC(NUMBER_6) NUMBER_6  &kp ASTERISK
-&kp LSHFT  &kp F1    &kp F2  &kp F3  &kp F10  &none  &none  &mt_hs LC(N0) N0  &mt_hs RC(NUMBER_1) NUMBER_1  &mt_hs LC(NUMBER_2) NUMBER_2  &mt_hs LC(NUMBER_3) NUMBER_3  &kp EQUAL
-&kp LCTRL  &kp LALT  &trans  &trans  &trans   &none  &none  &kp KP_DOT                                                                                                  &kp LEFT_SHIFT
+&none      &kp F7    &kp F8  &kp F9  &kp F12                &kp KP_MINUS      &mt_hs LC(N7) N7              &mt_hs LC(N8) N8              &mt_hs LC(N9) N9              &kp KP_DIVIDE
+&none      &kp F4    &kp F5  &kp F6  &kp F11  &none  &none  &kp KP_PLUS       &mt_hs LC(NUMBER_4) NUMBER_4  &mt_hs LC(N5) N5              &mt_hs LC(NUMBER_6) NUMBER_6  &kp KP_MULTIPLY
+&kp LSHFT  &kp F1    &kp F2  &kp F3  &kp F10  &none  &kp X  &mt_hs LC(N0) N0  &mt_hs RC(NUMBER_1) NUMBER_1  &mt_hs LC(NUMBER_2) NUMBER_2  &mt_hs LC(NUMBER_3) NUMBER_3  &kp KP_EQUAL
+&kp LCTRL  &kp LALT  &trans  &trans  &trans   &none  &none  &kp KP_DOT                                                                                                  &kp KP_COMMA
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
