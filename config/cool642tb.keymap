@@ -99,7 +99,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "WIN_AND_QWERTY";
             #binding-cells = <0>;
-            bindings = <&kp LWIN>, <&tog 1>;
+            bindings = <&kp LWIN>, <&tog 1>, <&tog 9>;
         };
 
         mt_hs: mt_hs {
@@ -130,9 +130,9 @@
         QWERTY {
             bindings = <
 &trans  &kp Q   &kp W   &kp E   &kp R                           &kp T   &kp Y  &kp U  &kp I      &kp O
-&trans  &kp A   &kp S   &kp D   &kp F        &none      &kp G   &kp H   &kp J  &kp K  &kp L      &kp P
-&trans  &kp Z   &kp X   &kp C   &kp V        &none      &none   &kp B   &kp N  &kp M  &kp COMMA  &kp PERIOD
-&trans  &trans  &trans  &trans  &lt 8 SPACE  &lt 3 F14  &trans  &trans                           &trans
+&trans  &kp A   &kp S   &kp D   &kp F      &none        &kp G   &kp H   &kp J  &kp K  &kp L      &kp P
+&trans  &kp Z   &kp X   &kp C   &kp V      &lt 2 ENTER  &none   &kp B   &kp N  &kp M  &kp COMMA  &kp PERIOD
+&trans  &trans  &trans  &trans  &kp SPACE  &lt 8 F14    &trans  &trans                           &trans
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -140,10 +140,10 @@
 
         NUM {
             bindings = <
-&none      &kp F7    &kp F8  &kp F9  &kp F12                &kp MINUS         &mt_hs LC(N7) N7              &mt_hs LC(N8) N8              &mt_hs LC(N9) N9              &kp SLASH
-&none      &kp F4    &kp F5  &kp F6  &kp F11  &none  &none  &kp PLUS          &mt_hs LC(NUMBER_4) NUMBER_4  &mt_hs LC(N5) N5              &mt_hs LC(NUMBER_6) NUMBER_6  &kp ASTERISK
-&kp LSHFT  &kp F1    &kp F2  &kp F3  &kp F10  &none  &none  &mt_hs LC(N0) N0  &mt_hs RC(NUMBER_1) NUMBER_1  &mt_hs LC(NUMBER_2) NUMBER_2  &mt_hs LC(NUMBER_3) NUMBER_3  &kp EQUAL
-&kp LCTRL  &kp LALT  &trans  &trans  &trans   &none  &none  &kp KP_DOT                                                                                                  &kp LEFT_SHIFT
+&none      &kp F7    &kp F8  &kp F9  &kp F12                &kp KP_MINUS      &mt_hs LC(N7) N7              &mt_hs LC(N8) N8              &mt_hs LC(N9) N9              &kp KP_DIVIDE
+&none      &kp F4    &kp F5  &kp F6  &kp F11  &none  &none  &kp KP_PLUS       &mt_hs LC(NUMBER_4) NUMBER_4  &mt_hs LC(N5) N5              &mt_hs LC(NUMBER_6) NUMBER_6  &kp KP_MULTIPLY
+&kp LSHFT  &kp F1    &kp F2  &kp F3  &kp F10  &none  &kp X  &mt_hs LC(N0) N0  &mt_hs RC(NUMBER_1) NUMBER_1  &mt_hs LC(NUMBER_2) NUMBER_2  &mt_hs LC(NUMBER_3) NUMBER_3  &kp KP_EQUAL
+&kp LCTRL  &kp LALT  &trans  &trans  &trans   &none  &none  &kp KP_DOT                                                                                                  &kp KP_COMMA
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
@@ -184,10 +184,10 @@
 
         other {
             bindings = <
-&trans  &kp LA(Q)        &kp C_VOLUME_DOWN       &kp C_VOLUME_UP  &trans                  &trans  &kp F16  &kp F17  &kp F18  &trans
-&trans  &kp PRINTSCREEN  &mt_hs LG(N) LG(LA(N))  &kp C_PP         &trans  &trans  &trans  &trans  &kp F19  &kp F20  &kp F21  &trans
-&trans  &kp C_PREVIOUS   &kp C_NEXT              &kp F15          &trans  &trans  &trans  &trans  &kp F22  &kp F23  &kp F24  &trans
-&trans  &trans           &trans                  &trans           &trans  &trans  &trans  &trans                             &trans
+&trans  &kp LA(Q)        &kp C_VOLUME_DOWN           &kp C_VOLUME_UP  &trans                  &trans  &kp F16  &kp F17  &kp F18  &trans
+&trans  &kp PRINTSCREEN  &mt_hs LG(LS(N)) LG(LA(N))  &kp C_PP         &trans  &trans  &trans  &trans  &kp F19  &kp F20  &kp F21  &trans
+&trans  &kp C_PREVIOUS   &kp C_NEXT                  &kp F15          &trans  &trans  &trans  &trans  &kp F22  &kp F23  &kp F24  &trans
+&trans  &trans           &trans                      &trans           &trans  &trans  &trans  &trans                             &trans
             >;
         };
 
@@ -206,6 +206,15 @@
 &trans  &kp N4  &kp N5  &kp N6  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp N1  &kp N2  &kp N3  &kp N0  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans
+            >;
+        };
+
+        arrow_mode {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                     &trans      &trans          &kp UP_ARROW    &trans           &trans
+&trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
+&trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans      &trans          &trans          &trans           &trans
+&trans  &trans  &trans  &trans  &kp SPACE  &trans  &trans  &kp RETURN                                                   &trans
             >;
         };
     };
