@@ -142,8 +142,8 @@
             bindings = <
 &none      &kp F7    &kp F8  &kp F9  &kp F12                &kp KP_MINUS      &mt_hs LC(N7) N7              &mt_hs LC(N8) N8              &mt_hs LC(N9) N9              &kp KP_DIVIDE
 &none      &kp F4    &kp F5  &kp F6  &kp F11  &none  &none  &kp KP_PLUS       &mt_hs LC(NUMBER_4) NUMBER_4  &mt_hs LC(N5) N5              &mt_hs LC(NUMBER_6) NUMBER_6  &kp KP_MULTIPLY
-&kp LSHFT  &kp F1    &kp F2  &kp F3  &kp F10  &none  &kp X  &mt_hs LC(N0) N0  &mt_hs RC(NUMBER_1) NUMBER_1  &mt_hs LC(NUMBER_2) NUMBER_2  &mt_hs LC(NUMBER_3) NUMBER_3  &kp KP_EQUAL
-&kp LCTRL  &kp LALT  &trans  &trans  &trans   &none  &none  &kp KP_DOT                                                                                                  &kp KP_COMMA
+&kp LSHFT  &kp F1    &kp F2  &kp F3  &kp F10  &none  &kp X  &mt_hs LC(N0) N0  &mt_hs RC(NUMBER_1) NUMBER_1  &mt_hs LC(NUMBER_2) NUMBER_2  &mt_hs LC(NUMBER_3) NUMBER_3  &kp EQUAL
+&kp LCTRL  &kp LALT  &trans  &trans  &trans   &none  &none  &kp KP_DOT                                                                                                  &kp COMMA
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
@@ -202,9 +202,9 @@
 
         game_num {
             bindings = <
-&trans  &kp N7  &kp N8  &kp N9  &trans                  &trans  &trans  &trans  &trans  &trans
+&trans  &kp N1  &kp N2  &kp N3  &kp N0                  &trans  &trans  &trans  &trans  &trans
 &trans  &kp N4  &kp N5  &kp N6  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp N1  &kp N2  &kp N3  &kp N0  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp N7  &kp N8  &kp N9  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans
             >;
         };
