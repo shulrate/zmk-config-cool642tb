@@ -55,7 +55,7 @@
         };
 
         keypirinha {
-            bindings = <&kp F22>;
+            bindings = <&kp F16>;
             key-positions = <34 38>;
         };
     };
